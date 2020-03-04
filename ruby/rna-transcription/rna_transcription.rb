@@ -6,3 +6,8 @@ To get started with TDD, see the `README.md` file in your
 `ruby/rna-transcription` directory.
 =end
 
+class Complement
+  def self.of_dna(dna)
+    dna.gsub(/[ACGT]/, "C" => "G", "G" => "C", "A" => "U", "T" => "A")
+  end
+end
