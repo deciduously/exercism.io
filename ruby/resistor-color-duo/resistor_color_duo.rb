@@ -7,10 +7,15 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 class ResistorColorDuo
-  COLORS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
+  private
+
+  COLORS = %w[black brown red orange yellow green blue violet grey white].freeze
   def self.color_code(c)
     COLORS.index(c)
   end
+
+  public
+
   def self.value(arr)
     self.color_code(arr[0]) * 10 + self.color_code(arr[1])
   end
